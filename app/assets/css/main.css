@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+  --font-lufga: "Lufga", "sans-serif";
+  --color-accent: #171717;
+  --text-tiny: 75px;
+  --color-p: #344054;
+  --circle-color:#feb173;
+  --border-image: 'linear-gradient(to right, #FFFFFF, #C9C9C900) 1'
+  
+ 
+}
+
+
+@keyframes float-left {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-50px); }
+}
+
+@keyframes float-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+}
+
+@keyframes float-center {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+}
+
+.animate-float-left {
+  animation: float-left 3s ease-in-out infinite;
+}
+
+.animate-float-right {
+  animation: float-right 3s ease-in-out infinite;
+}
+
+.animate-float-center {
+  animation: float-center 2.5s ease-in-out infinite;
+}
+
+.animate-float-center img {
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+
+/*Slide animation*/
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  @apply flex; 
+  animation: marquee 8s linear infinite;
+}
